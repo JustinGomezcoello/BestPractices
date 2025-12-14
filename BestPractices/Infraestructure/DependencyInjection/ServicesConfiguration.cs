@@ -1,4 +1,4 @@
-﻿using Best_Practices.Controllers;
+﻿using BestPracticesWorkshop.Controllers;
 using Best_Practices.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using System;

@@ -28,6 +28,11 @@ namespace Best_Practices
             services.AddControllersWithViews();
             dependencyInjection.ConfigureServices(services);
 
+            // Configuración de Dependency Injection para el Workshop
+            services.AddSingleton<BestPracticesWorkshop.Repositories.ICarRepository, BestPracticesWorkshop.Repositories.InMemoryCarRepository>();
+            services.AddSingleton<BestPracticesWorkshop.Factories.VehicleFactory, BestPracticesWorkshop.Factories.FordVehicleFactory>();
+            services.AddSingleton<BestPracticesWorkshop.Services.AddVehicleService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
